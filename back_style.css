@@ -1,0 +1,114 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(45deg, #333, #555);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.project img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Grille des projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cartes des projets */
+/* .project-card {
+    background: #f4f4f9;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+.project-card {
+    /* background: #fff; Une couleur claire pour contraster avec la bordure */
+    /* border: 2px solid #000; Bordure noire */
+    /* border: 5px dashed red; */
+    border-radius: 10px;
+    border: 2px solid #000; /* Bordure noire */
+    padding: 1.5rem; /* Espacement interne */
+    background: #fff; /* Assurez-vous d'avoir un fond contrasté */
+    /* padding: 1.5rem; */
+    margin: 1rem;
+}
+
+
+/* Effet au survol */
+.project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    border-color: #333; /* Change la couleur de la bordure au survol */
+}
